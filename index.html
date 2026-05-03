@@ -1,414 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Omar's Portfolio - Frontend Developer specializing in responsive and user-friendly web interfaces using HTML, CSS, and JavaScript.">
-    <title>Omar | Frontend Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Mouttalie | Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- ===================== HEADER / NAVIGATION ===================== -->
-    <header id="header">
-        <a href="#" class="logo" id="logo"><img src="assets/icons/logo.png" alt="Omar Logo" class="logo-img"></a>
-        <nav id="main-nav">
-            <ul class="nav-links">
-                <li><a href="#about" id="nav-about">about</a></li>
-                <li><a href="#contact" id="nav-contact">contact</a></li>
-                <li><a href="#projects" id="nav-projects">projects</a></li>
-                <li><a href="#" id="nav-resume">Resume / CV</a></li>
-                <li class="nav-divider"></li>
-                <li><a href="https://www.linkedin.com/in/omar-mouttalie-05a842406/" id="nav-linkedin" class="social-link" target="_blank" rel="noopener noreferrer">linkedin</a></li>
-                <li><a href="https://github.com/omarmouttalie" id="nav-github" class="social-link" target="_blank" rel="noopener noreferrer">github</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-    </header>
 
-    <!-- ===================== HERO SECTION ===================== -->
-    <section id="hero">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-line">
-                    <span class="line-number">01</span>
-                    <span class="code-bracket">&lt;</span><span class="code-greeting">Hello, I'm </span><span class="code-name">Omar!</span><span class="code-bracket">/&gt;</span>
-                </p>
-                <p class="hero-line">
-                    <span class="line-number">02</span>
-                    <span class="code-bracket">&lt;</span><span class="code-greeting">I </span><span class="code-highlight-design">design</span> <span class="emoji">🖊️</span> <span class="code-greeting">and </span><span class="code-highlight-develop">develop</span> <span class="emoji">💻</span>
-                </p>
-                <p class="hero-line">
-                    <span class="line-number">03</span>
-                    <span class="code-greeting">websites</span><span class="code-bracket">/&gt;</span>
-                </p>
-            </div>
-            <p class="hero-subtitle">passionate about turning ideas into clean,<br>interactive, and responsive web experiences</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary" id="btn-view-work">View my Work</a>
-                <a href="#contact" class="btn btn-secondary" id="btn-get-in-touch">Get in Touch→</a>
-            </div>
-            <div class="availability-badge" id="availability-badge">
-                <span class="pulse-dot"></span>
-                Available for now opportunities
-            </div>
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;Omar.dev/&gt;</a>
+      <ul class="nav-links">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#projects" class="nav-link mobile-link">Projects</a></li>
+        <li><a href="#about" class="nav-link mobile-link">About</a></li>
+        <li><a href="#skills" class="nav-link mobile-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Gradient orbs background -->
+    <div class="hero-orb hero-orb--pink"></div>
+    <div class="hero-orb hero-orb--purple"></div>
+    <div class="hero-orb hero-orb--yellow"></div>
+    <div class="hero-orb hero-orb--blue"></div>
+
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm Omar</p>
+      <h1 class="hero-headline">
+        I <span class="hero-accent">Design</span> and <span class="hero-accent">Develop</span><span class="hero-cursor">_</span>
+      </h1>
+      <h2 class="hero-subheadline">
+        Modern, Responsive,<br />Pixel Perfect Web Experiences
+      </h2>
+      <p class="hero-description">
+        Passionate about turning ideas into clean,<br />
+        interactive, and responsive web experiences
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn--primary">View My Work →</a>
+        <a href="assets/documents/personal-CV.pdf" class="btn btn--secondary" download>Download My CV ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="about-card glass-card reveal">
+      <div class="about-top">
+        <div class="about-text">
+          <h2 class="section-title--left">About me</h2>
+          <p class="about-intro">
+            My name is <strong>Omar Mouttalie</strong>, I'm <strong>21</strong> years old
+          </p>
         </div>
-    </section>
-
-    <!-- ===================== ABOUT SECTION ===================== -->
-    <section id="about">
-        <div class="container">
-            <div class="about-card">
-                <h2 class="section-heading about-heading">About me→</h2>
-                <p class="about-text">
-                    I'm a frontend developer focused on building responsive and user-friendly web
-                    interfaces using HTML, CSS, and JavaScript. My journey started while studying
-                    accounting and finance, but I was drawn to problem-solving and building things,
-                    which led me to programming. I began with Python and later found my passion in
-                    frontend development. I enjoy turning ideas into clean, interactive experiences
-                    and continuously improving my skills by working on real projects and refining my
-                    craft to build pixel-perfect, real-world applications
-                </p>
-            </div>
+        <div class="about-image-wrap">
+          <img
+            src="assets/documents/headshot.jpeg"
+            alt="Omar Mouttalie"
+            class="about-photo"
+            onerror="this.style.background='linear-gradient(135deg,#1e2540,#2d1b69)';this.removeAttribute('src')"
+          />
         </div>
-    </section>
+      </div>
+      <p class="about-bio">
+        I'm a frontend developer focused on building responsive and user-friendly web interfaces using HTML, CSS, and JavaScript. My journey started while studying accounting and finance, but I was drawn to problem-solving and building things, which led me to programming. I began with Python and later found my passion in frontend development. I enjoy turning ideas into clean, interactive experiences and continuously improving my skills by working on real projects and refining my craft to build pixel-perfect, real-world applications
+      </p>
+    </div>
+  </section>
 
-    <!-- ===================== SKILLS SECTION ===================== -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills→</h2>
+  <!-- ═══════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════ -->
+  <section class="skills section" id="skills">
+    <!-- Tech Stack -->
+    <div class="skills-block reveal">
+      <h2 class="section-title">My Tech Stack</h2>
+      <div class="tech-grid">
 
-            <!-- Frontend Skills -->
-            <div class="skills-category">
-                <div class="skills-category-header">
-                    <h3 class="skills-category-title">Core Skills: Frontend</h3>
-                    <p class="skills-category-desc">Building responsive and user-friendly web interfaces using modern web technologies.</p>
-                </div>
-                <div class="skills-grid skills-grid-3">
-                    <div class="skill-card" id="skill-javascript">
-                        <h4 class="skill-name skill-name-js">Javascript</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/js.png" alt="JavaScript" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Adding interactivity and dynamic behavior to web applications.</p>
-                        <span class="mastery-badge mastery-medium">Mastery: Medium</span>
-                    </div>
-                    <div class="skill-card" id="skill-html">
-                        <h4 class="skill-name skill-name-html">HTML</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/html-5.png" alt="HTML5" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Adding interactivity and dynamic behavior to web applications.</p>
-                        <span class="mastery-badge mastery-high">Mastery: high</span>
-                    </div>
-                    <div class="skill-card" id="skill-css">
-                        <h4 class="skill-name skill-name-css">CSS</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/css.png" alt="CSS3" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Adding interactivity and dynamic behavior to web applications.</p>
-                        <span class="mastery-badge mastery-high">Mastery: high</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Backend Skills -->
-            <div class="skills-category">
-                <div class="skills-category-header">
-                    <h3 class="skills-category-title">Backend</h3>
-                </div>
-                <div class="skills-grid skills-grid-2">
-                    <div class="skill-card" id="skill-php">
-                        <h4 class="skill-name">PHP</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/php.png" alt="PHP" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Understanding server-side logic and backend fundamentals.</p>
-                        <span class="mastery-badge mastery-basic">Mastery: Basic</span>
-                    </div>
-                    <div class="skill-card" id="skill-sql">
-                        <h4 class="skill-name">SQL</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/database.png" alt="SQL" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Managing and querying relational databases.</p>
-                        <span class="mastery-badge mastery-medium">Mastery: Medium</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="skills-category">
-                <div class="skills-category-header">
-                    <h3 class="skills-category-title">Tools</h3>
-                    <p class="skills-category-desc">Using essential tools to design, manage, and collaborate on web projects efficiently.</p>
-                </div>
-                <div class="skills-grid skills-grid-3">
-                    <div class="skill-card" id="skill-git">
-                        <h4 class="skill-name">Git</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/social.png" alt="Git" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Version control for tracking and managing code changes.</p>
-                        <span class="mastery-badge mastery-medium">Mastery: Medium</span>
-                    </div>
-                    <div class="skill-card" id="skill-github">
-                        <h4 class="skill-name">GitHub</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/github (1).png" alt="GitHub" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Collaborating and sharing projects through repositories.</p>
-                        <span class="mastery-badge mastery-medium">Mastery: Medium</span>
-                    </div>
-                    <div class="skill-card" id="skill-figma">
-                        <h4 class="skill-name">Figma</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/figma (1).png" alt="Figma" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Designing and translating UI/UX into real interfaces.</p>
-                        <span class="mastery-badge mastery-medium">Mastery: Medium</span>
-                    </div>
-                    <div class="skill-card" id="skill-xampp">
-                        <h4 class="skill-name">XAMPP</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/xampp.png" alt="XAMPP" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Local environment for developing and testing web applications.</p>
-                        <span class="mastery-badge mastery-basic">Mastery: Basic</span>
-                    </div>
-                    <div class="skill-card" id="skill-phpmyadmin">
-                        <h4 class="skill-name">PhpMyAdmin</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/phpmyadmin-icon.png" alt="PhpMyAdmin" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Managing databases through a graphical interface.</p>
-                        <span class="mastery-badge mastery-basic">Mastery: Basic</span>
-                    </div>
-                    <div class="skill-card" id="skill-mysql">
-                        <h4 class="skill-name">MySQL</h4>
-                        <div class="skill-icon">
-                            <img src="assets/icons/mysql.png" alt="MySQL" loading="lazy">
-                        </div>
-                        <p class="skill-desc">Writing basic queries and managing data.</p>
-                        <span class="mastery-badge mastery-basic">Mastery: Basic</span>
-                    </div>
-                </div>
-            </div>
+        <div class="tech-card glass-card-dark">
+          <h3 class="tech-name">Javascript</h3>
+          <div class="tech-icon-wrap tech-icon--js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          </div>
+          <p class="tech-desc">Adding interactivity and dynamic behavior to web applications.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Medium</span>
+            <span class="badge">In Improvement</span>
+          </div>
         </div>
-    </section>
 
-    <!-- ===================== PROJECTS SECTION ===================== -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects→</h2>
-
-            <!-- Projects Hero Banner -->
-            <div class="projects-hero" id="projects-hero">
-                <div class="projects-hero-image">
-                    <img src="assets/icons/code.jpg" alt="Code editor screenshot" loading="lazy">
-                </div>
-                <div class="projects-hero-content">
-                    <h3 class="projects-hero-heading">
-                        Crafting <span class="highlight-clean">Clean</span> and<br>
-                        <span class="highlight-interactive">Interactive</span> User Experiences
-                    </h3>
-                    <p class="projects-hero-text">
-                        A front-end projects built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>,
-                        also back-end handling and connecting with database with <strong>PHP</strong> and manipulating databases with
-                        <strong>SQL</strong> queries designed to deliver a seamless and responsive user experience across all devices.
-                    </p>
-                    <a href="#projects-grid" class="btn btn-secondary" id="btn-view-projects">View Projects ↓</a>
-                </div>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="projects-grid" id="projects-grid">
-                <!-- Weather App -->
-                <div class="project-card" id="project-weather" data-project-title="Weather App" data-project-img="assets/projects-pics/weather.PNG" data-project-desc="A real-time weather application that fetches data from a weather API and displays current conditions, multi-day forecasts, and location-based weather information. Features include city search, temperature unit toggle, dynamic weather icons, and a responsive layout that adapts beautifully across all device sizes." data-project-tags="HTML,CSS,JavaScript,API">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/weather.PNG" alt="Weather App Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Weather App</h3>
-                        <p class="project-desc">A real-time weather application that fetches data from an API and displays current conditions, forecasts, and location-based weather info.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" id="project-crud" data-project-title="CRUD Article Web App" data-project-img="assets/projects-pics/crud.PNG" data-project-desc="A full-stack article management system with Create, Read, Update, and Delete functionality, powered by PHP and SQL database. Features include article creation with rich text, editing existing articles, deleting entries, and listing all articles with a clean, organized interface. The backend handles data validation and SQL queries for seamless database operations." data-project-tags="HTML,CSS,PHP,SQL">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/crud.PNG" alt="CRUD Article Web App Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">CRUD Article Web App</h3>
-                        <p class="project-desc">A full-stack article management system with Create, Read, Update, and Delete functionality, powered by PHP and SQL database.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Calculator -->
-                <div class="project-card" id="project-calculator" data-project-title="Calculator" data-project-img="assets/projects-pics/clc.PNG" data-project-desc="A sleek, functional calculator with a clean UI supporting basic arithmetic operations and keyboard input. Built with vanilla JavaScript, it handles chained operations, decimal numbers, percentage calculations, and includes a clear/reset function. The responsive design ensures usability on both desktop and mobile devices." data-project-tags="HTML,CSS,JavaScript">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/clc.PNG" alt="Calculator Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Calculator</h3>
-                        <p class="project-desc">A sleek, functional calculator with a clean UI supporting basic arithmetic operations and keyboard input.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quiz App -->
-                <div class="project-card" id="project-quiz" data-project-title="Quiz App" data-project-img="assets/projects-pics/quizz.PNG" data-project-desc="An interactive quiz application with multiple-choice questions, score tracking, and a dynamic results display. Features include randomized question order, progress indicators, instant feedback on correct/incorrect answers, a timer for each question, and a detailed score breakdown at the end with the ability to review answers." data-project-tags="HTML,CSS,JavaScript">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/quizz.PNG" alt="Quiz App Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Quiz App</h3>
-                        <p class="project-desc">An interactive quiz application with multiple-choice questions, score tracking, and a dynamic results display.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fashion Clothes Website -->
-                <div class="project-card" id="project-fashion" data-project-title="Fashion Clothes Website" data-project-img="assets/projects-pics/clothesAPI.PNG" data-project-desc="A responsive fashion e-commerce website with product listings, filtering, and dynamic data loaded from a local JSON API. Features include category-based filtering, product search, detailed product cards with pricing, a clean modern layout, and smooth transitions between views. The design prioritizes visual appeal and user experience." data-project-tags="HTML,CSS,JavaScript,JSON API">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/clothesAPI.PNG" alt="Fashion Website Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Fashion Clothes Website</h3>
-                        <p class="project-desc">A responsive fashion e-commerce website with product listings, filtering, and dynamic data loaded from a local JSON API.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">JSON API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rock Paper Scissors -->
-                <div class="project-card" id="project-rps" data-project-title="Rock Paper Scissors" data-project-img="assets/projects-pics/game.PNG" data-project-desc="A fun, interactive Rock Paper Scissors game against the computer with score tracking and animated results. Features include animated hand gestures, round-by-round history, win/loss/draw statistics, and engaging visual feedback with smooth CSS animations for each game outcome." data-project-tags="HTML,CSS,JavaScript">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/game.PNG" alt="Rock Paper Scissors Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Rock Paper Scissors</h3>
-                        <p class="project-desc">A fun, interactive Rock Paper Scissors game against the computer with score tracking and animated results.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- To-Do App -->
-                <div class="project-card" id="project-todo" data-project-title="To-Do App" data-project-img="assets/projects-pics/todo.PNG" data-project-desc="A task management application with add, edit, delete, and complete functionality with persistent local storage. Features include task prioritization, filtering by status (all/active/completed), drag-and-drop reordering, due dates, and automatic data persistence so your tasks survive browser refreshes." data-project-tags="HTML,CSS,JavaScript">
-                    <div class="project-preview">
-                        <img src="assets/projects-pics/todo.PNG" alt="To-Do App Screenshot" class="project-screenshot" loading="lazy">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">To-Do App</h3>
-                        <p class="project-desc">A task management application with add, edit, delete, and complete functionality with persistent local storage.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="tech-card glass-card-dark">
+          <h3 class="tech-name">HTML</h3>
+          <div class="tech-icon-wrap tech-icon--html">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+          </div>
+          <p class="tech-desc">Semantic structure for building accessible and well-organized web pages.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: High</span>
+            <span class="badge">In Improvement</span>
+          </div>
         </div>
-    </section>
 
-    <!-- ===================== CONTACT SECTION ===================== -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch→</h2>
-            <div class="contact-wrapper contact-wrapper-centered">
-                <p class="contact-text">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                <div class="contact-links contact-links-row">
-                    <a href="mailto:omarmouttalie@gmail.com" class="contact-item contact-item-email" id="contact-email">
-                        <span class="contact-icon-svg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                        </span>
-                        <span class="contact-label">
-                            <span class="contact-label-title">Email</span>
-                            <span class="contact-label-value">omarmouttalie@gmail.com</span>
-                        </span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/omar-mouttalie-05a842406/" class="contact-item contact-item-linkedin" id="contact-linkedin-link" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon-svg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </span>
-                        <span class="contact-label">
-                            <span class="contact-label-title">LinkedIn</span>
-                            <span class="contact-label-value">Omar Mouttalie</span>
-                        </span>
-                    </a>
-                    <a href="https://github.com/omarmouttalie" class="contact-item contact-item-github" id="contact-github-link" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon-svg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </span>
-                        <span class="contact-label">
-                            <span class="contact-label-title">GitHub</span>
-                            <span class="contact-label-value">omarmouttalie</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
+        <div class="tech-card glass-card-dark">
+          <h3 class="tech-name">CSS</h3>
+          <div class="tech-icon-wrap tech-icon--css">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+          </div>
+          <p class="tech-desc">Styling and layout design using modern techniques like Flexbox and Grid for responsive interfaces.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Medium</span>
+            <span class="badge">In Improvement</span>
+          </div>
         </div>
-    </section>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer id="footer">
-        <div class="container">
-            <a href="#" class="logo footer-logo"><img src="assets/icons/logo.png" alt="Omar Logo" class="logo-img"></a>
-            <p class="footer-text">© 2026 Omar. All rights reserved.</p>
+        <div class="tech-card glass-card-dark">
+          <h3 class="tech-name">SQL</h3>
+          <div class="tech-icon-wrap tech-icon--sql">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+          </div>
+          <p class="tech-desc">Adding interactivity and dynamic behavior to web applications.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Medium</span>
+            <span class="badge">In Improvement</span>
+          </div>
         </div>
-    </footer>
 
-    <!-- ===================== PROJECT MODAL ===================== -->
-    <div class="project-modal-overlay" id="project-modal-overlay">
-        <div class="project-modal" id="project-modal">
-            <button class="modal-close" id="modal-close" aria-label="Close modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
-            <div class="modal-image-wrapper">
-                <img src="" alt="" id="modal-img" class="modal-image">
-            </div>
-            <div class="modal-content">
-                <h3 class="modal-title" id="modal-title"></h3>
-                <p class="modal-desc" id="modal-desc"></p>
-                <div class="modal-tags" id="modal-tags"></div>
-            </div>
+        <div class="tech-card glass-card-dark">
+          <h3 class="tech-name">PHP</h3>
+          <div class="tech-icon-wrap tech-icon--php">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+          </div>
+          <p class="tech-desc">Adding interactivity and dynamic behavior to web applications.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Basic</span>
+            <span class="badge">In Improvement</span>
+          </div>
         </div>
+
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Tools -->
+    <div class="tools-block reveal" id="tools">
+      <h2 class="section-title">Tools I Use</h2>
+      <div class="tools-grid">
+
+        <div class="tool-card glass-card-dark">
+          <h3 class="tech-name">MySQL Workbench</h3>
+          <div class="tool-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL Workbench" />
+          </div>
+          <p class="tech-desc">Writing basic queries manipulating and managing data.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Basic</span>
+            <span class="badge">In Improvement</span>
+          </div>
+        </div>
+
+        <div class="tool-card glass-card-dark">
+          <h3 class="tech-name">Git</h3>
+          <div class="tool-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+          </div>
+          <p class="tech-desc">Version control for tracking and managing code changes.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Medium</span>
+            <span class="badge">In Improvement</span>
+          </div>
+        </div>
+
+        <div class="tool-card glass-card-dark">
+          <h3 class="tech-name">GitHub</h3>
+          <div class="tool-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1)" />
+          </div>
+          <p class="tech-desc">Collaborating and sharing projects through repositories.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Medium</span>
+            <span class="badge">In Improvement</span>
+          </div>
+        </div>
+
+        <div class="tool-card glass-card-dark">
+          <h3 class="tech-name">Figma</h3>
+          <div class="tool-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+          </div>
+          <p class="tech-desc">Designing and translating UI/UX into real interfaces.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Medium</span>
+            <span class="badge">In Improvement</span>
+          </div>
+        </div>
+
+        <div class="tool-card glass-card-dark">
+          <h3 class="tech-name">XAMPP</h3>
+          <div class="tool-icon-wrap tool-icon--xampp">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg" alt="XAMPP" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:3rem;font-weight:700;color:#fb7a24\'>X</span>'" />
+          </div>
+          <p class="tech-desc">Local environment for developing and testing web applications.</p>
+          <div class="tech-badges">
+            <span class="badge">Mastery: Basic</span>
+            <span class="badge">In Improvement</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="soft-skills-block reveal">
+      <h2 class="section-title">Soft Skills</h2>
+      <div class="soft-card glass-card">
+        <div class="soft-item">
+          <h3 class="soft-title">→Continuous Learning</h3>
+          <p class="soft-desc">Always exploring new technologies and improving existing skills.</p>
+        </div>
+        <div class="soft-item">
+          <h3 class="soft-title">→Creativity</h3>
+          <p class="soft-desc">Turning ideas into engaging and user-friendly digital experiences.</p>
+        </div>
+        <div class="soft-item">
+          <h3 class="soft-title">→Adaptability</h3>
+          <p class="soft-desc">Learning new tools and adjusting quickly to different project needs.</p>
+        </div>
+        <div class="soft-item">
+          <h3 class="soft-title">→Communication</h3>
+          <p class="soft-desc">Sharing ideas clearly and collaborating effectively on projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════ -->
+  <section class="projects section" id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <!-- Projects Banner -->
+    <div class="projects-banner reveal">
+      <div class="projects-banner-image">
+        <img src="assets/code.jpg" alt="Code" onerror="this.parentElement.classList.add('no-img')" />
+      </div>
+      <div class="projects-banner-content glass-card-dark">
+        <h3>Crafting <strong>Clean</strong> and <strong>Interactive</strong> User Experiences</h3>
+        <p>A front-end projects built with <strong>HTML, CSS</strong>, and <strong>JavaScript</strong>, also back-end handling and connecting with database with <strong>PHP</strong> and manipulating databases with <strong>SQL</strong> queries designed to deliver a seamless and <strong>responsive</strong> user <strong>experience</strong> across all devices.</p>
+        <a href="#project-cards" class="btn btn--glass">View Projects ↓</a>
+      </div>
+    </div>
+
+    <!-- Project Cards - Dev Projects -->
+    <div class="project-cards-grid" id="project-cards">
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/weather.PNG" alt="Weather App" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-desc">A real-time weather application that fetches data from an API and displays current conditions, forecasts, and location-based weather info.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">API</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/weatherApp" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/crud.PNG" alt="CRUD Article Web App" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">CRUD Article Web App</h3>
+          <p class="project-desc">A full-stack article management system with Create, Read, Update, and Delete functionality, powered by PHP and SQL database.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">PHP</span>
+            <span class="tag">SQL</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/PHP3/tree/main/Realisation" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/clothesAPI.PNG" alt="Fashion Clothes Website" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">Fashion Clothes Website</h3>
+          <p class="project-desc">A responsive fashion e-commerce website with product listings, filtering, and dynamic data loaded from a local JSON API.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">JSON API</span>
+          </div>
+          <a href="https://github.com/omarmouttalie" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/quizz.PNG" alt="History Quiz App" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">History Quiz App</h3>
+          <p class="project-desc">An interactive history quiz with multiple choice questions, score tracking, and immediate feedback on answers.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/History-Quizz" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/todo.PNG" alt="To-Do App" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">To-Do Simple App</h3>
+          <p class="project-desc">A clean and minimal task manager app with add, complete, and delete functionality. Built with no AI, pure vanilla JS.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/to-do-app" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/clc.PNG" alt="Calculator" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">Calculator</h3>
+          <p class="project-desc">A sleek, functional calculator with a clean UI supporting basic arithmetic operations and keyboard input.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/js-calculator" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/game.PNG" alt="Rock Paper Scissors" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">Rock Paper Scissors</h3>
+          <p class="project-desc">A fun, interactive Rock Paper Scissors game against the computer with score tracking and animated results. Features include animated hand gestures.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/Rock-paper-scissors-game" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/ytb-clone.PNG" alt="YouTube Clone" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">YouTube Clone</h3>
+          <p class="project-desc">A static YouTube clone built with HTML and CSS, focused on layout structure, and recreating a modern user interface.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+          <a href="https://github.com/omarmouttalie/YouTube-clone" target="_blank" class="project-link">View Source Code ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Figma Projects -->
+    <div class="figma-cards-grid reveal">
+
+      <div class="project-card figma-card">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/shoify-figma-clone.PNG" alt="Shopify Clone Figma" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">Shopify Clone</h3>
+          <p class="project-desc">Shopify Clone i Created using figma design tool, it created desktop version and mobile version of the same design</p>
+          <div class="project-tags">
+            <span class="tag">Figma</span>
+          </div>
+          <a href="https://www.figma.com/design/iSzURoKG5rY9i7yBIvn3e8/Figma-autoformation" target="_blank" class="project-link">View Design ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card figma-card">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/portfolio-design.PNG" alt="This Portfolio Design" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">This Portfolio Design</h3>
+          <p class="project-desc">The final design of this portfolio i created using figma then i coded the design with front-end technologies</p>
+          <div class="project-tags">
+            <span class="tag">Figma</span>
+          </div>
+          <a href="https://www.figma.com/design/skzHhkM3p7IOAvhi147GhP/potfolio-design" target="_blank" class="project-link">View Design ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card figma-card">
+        <div class="project-card-image">
+          <img src="assets/project-screenshots/old-portfolio-design.PNG" alt="Old Portfolio Design" onerror="this.parentElement.classList.add('no-preview')" />
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-title">Old Portfolio Design</h3>
+          <p class="project-desc">Design of the old portfolio i used to have and showcase my skills on</p>
+          <div class="project-tags">
+            <span class="tag">Figma</span>
+          </div>
+          <a href="https://www.figma.com/design/45A5YLXUrMXPRTkrVwbxdV/Untitled" target="_blank" class="project-link">View Design ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="projects-note">I Have more projects i worked on but felt those are enough to showcase.</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Get in Touch→</h2>
+
+    <div class="contact-card glass-card reveal">
+      <p class="contact-intro">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+      </p>
+
+      <div class="contact-links">
+
+        <a href="https://www.linkedin.com/in/omar-mouttalie-05a842406/" target="_blank" class="contact-link-item">
+          <div class="contact-link-icon contact-icon--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">LINKEDIN</span>
+            <span class="contact-link-value">Omar Mouttalie</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/omarmouttalie" target="_blank" class="contact-link-item">
+          <div class="contact-link-icon contact-icon--github">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">GITHUB</span>
+            <span class="contact-link-value">omarmouttalie</span>
+          </div>
+        </a>
+
+        <a href="mailto:omarmouttalie@gmail.com" class="contact-link-item">
+          <div class="contact-link-icon contact-icon--gmail">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </div>
+          <div class="contact-link-info">
+            <span class="contact-link-label">GMAIL</span>
+            <span class="contact-link-value">omarmouttalie@gmail.com</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">&lt;Omar.dev/&gt;</span>
+      <span class="footer-copy">© 2026 &nbsp; Omar. &nbsp; All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
